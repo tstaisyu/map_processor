@@ -10,8 +10,8 @@ def convert_image(input_path, output_path):
 
         newData = []
         for item in datas:
-            # 未探索エリアのグレースケール値をチェック（例えば、グレーが(128, 128, 128)）
-            if item[0] == 128 and item[1] == 128 and item[2] == 128:
+            # 未探索エリアのグレースケール値205をチェック
+            if item[0] == 205 and item[1] == 205 and item[2] == 205:
                 newData.append((255, 255, 255, 0))  # 透明に変更
             else:
                 newData.append(item)
